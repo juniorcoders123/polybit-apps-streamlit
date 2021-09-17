@@ -12,7 +12,11 @@ PAGES = {
     "Get Inspired": get_insp_app
 }
 
+query_params = st.experimental_get_query_params()
+default = int(query_params["activity"][0]) if "activity" in query_params else 0
+
 st.sidebar.title('All my Apps!')
-selection = st.sidebar.radio("Go to", list(PAGES.keys()))
+selection = st.sidebar.radio("Go to", list(PAGES.keys()), index=default)
+st.experimental_set_query_params(activity=list(PAGES).index(selection))
 page = PAGES[selection]
 page.app()
