@@ -55,7 +55,11 @@ def app():
         st.session_state.tic_tac_toe_board = [['[]','[]','[]'],['[]','[]','[]'],['[]','[]','[]']]
         st.session_state.tic_tac_toe_next_player = "X"
         st.session_state.tic_tac_toe_winner = None
-        winner_holder.empty()
+        winner_holder.markdown(f"""
+        ### 
+        Current Player : **{st.session_state.tic_tac_toe_next_player}**
+        ###
+    """)
     if st.session_state.tic_tac_toe_winner:
         winner_holder.success(f'{st.session_state.tic_tac_toe_winner} has won the game! 🎈')
     
@@ -86,4 +90,3 @@ def app():
     x3y1 = rightCol.button(st.session_state.tic_tac_toe_board[2][0], key="x3y1", on_click=handle_click, args=(2,0))
     x3y2 = rightCol.button(st.session_state.tic_tac_toe_board[2][1], key="x3y2", on_click=handle_click, args=(2,1))
     x3y3 = rightCol.button(st.session_state.tic_tac_toe_board[2][2], key="x3y3", on_click=handle_click, args=(2,2))
-    
