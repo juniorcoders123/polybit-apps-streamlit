@@ -86,5 +86,4 @@ def app():
     x3y1 = rightCol.button(st.session_state.tic_tac_toe_board[2][0], key="x3y1", on_click=handle_click, args=(2,0))
     x3y2 = rightCol.button(st.session_state.tic_tac_toe_board[2][1], key="x3y2", on_click=handle_click, args=(2,1))
     x3y3 = rightCol.button(st.session_state.tic_tac_toe_board[2][2], key="x3y3", on_click=handle_click, args=(2,2))
-
-app()
+    
