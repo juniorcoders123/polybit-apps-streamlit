@@ -9,7 +9,9 @@ def get_quote():
     return quote
 
 def app():
-    st.session_state.quote = get_quote()
+    if st.session_state.can_quote == True:
+        st.session_state.quote = get_quote()
+        st.session_state.can_quote = False
     st.markdown(f"""
         # Get Inspired
         #### Brighten your day with quotes from the greatest minds...
