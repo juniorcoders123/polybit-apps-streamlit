@@ -9,18 +9,18 @@ def get_quote():
     return quote
 
 def app():
-    if st.session_state.can_quote == True:
-        st.session_state.quote = get_quote()
-        st.session_state.can_quote = False
+    if st.session_state.get_inspired_can_quote == True:
+        st.session_state.get_inspired_quote = get_quote()
+        st.session_state.get_inspired_can_quote = False
     st.markdown(f"""
         # Get Inspired
         #### Brighten your day with quotes from the greatest minds...
         Made by Swastik 'Polybit' Biswas
         ## 
-        ## *" {st.session_state.quote[0]} "*
-        *- {st.session_state.quote[1]}*
+        ## *" {st.session_state.get_inspired_quote[0]} "*
+        *- {st.session_state.get_inspired_quote[1]}*
         ## 
     """)
     action = st.button("I'm still not inspired yet. Hit me with another one!")
     if action:
-        st.session_state.quote = get_quote()
+        st.session_state.get_inspired_quote = get_quote()
