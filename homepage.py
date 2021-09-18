@@ -2,7 +2,7 @@ import streamlit as st
 
 #Initial setting up (to avoid errors)
 st.set_page_config(page_title='Streamlit Apps | Swastik "Polybit" Biswas - Junior Coders', page_icon='🎯', layout = 'centered', initial_sidebar_state = 'expanded')
-st.session_state.get_inspired_can_quote = True
+st.session_state.can_quote = True
 
 #all my apps
 from image_recognition import app as image_recog_app
