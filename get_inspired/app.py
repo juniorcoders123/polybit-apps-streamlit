@@ -9,6 +9,7 @@ def get_quote():
     st.stop()
 
 def app():
+    st.session_state.get_inspired_quote = ['Loading, please wait momentarily.','The website itself, who else did you expect?']
     st.markdown(f"""
         # Get Inspired
         #### Brighten your day with quotes from the greatest minds...
@@ -20,5 +21,5 @@ def app():
     """)
     action = st.button("I'm still not inspired yet. Hit me with another one!")
     if action:
-        st.session_state.get_inspired_quote = get_quote()
+        get_quote()
     get_quote()
