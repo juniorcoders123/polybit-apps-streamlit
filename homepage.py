@@ -1,7 +1,7 @@
 import streamlit as st
 
 #Initial setting up (to avoid errors)
-st.set_page_config(page_title='Streamlit Apps | Swastik "Polybit" Biswas - Junior Coders', page_icon='🎯', layout = 'centered', initial_sidebar_state = 'expanded')
+st.set_page_config(page_title='Streamlit Apps | Swastik "Polybit" Biswas - Junior Coders', page_icon='🎯', layout = 'wide', initial_sidebar_state = 'expanded')
 st.session_state.can_quote = True
 
 #all my apps
