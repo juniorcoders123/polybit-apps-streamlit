@@ -1,5 +1,4 @@
 import streamlit as st
-from bokeh.models.widgets import Div
 
 #Initial setting up (to avoid errors)
 st.set_page_config(page_title='Streamlit Apps | Swastik "Polybit" Biswas - Junior Coders', page_icon='🎯', layout = 'centered', initial_sidebar_state = 'expanded')
@@ -26,15 +25,7 @@ if selection:
 page = PAGES[selection]
 page.app()
 
-visit_techninja_site = st.button("Visit TechNinja's Site")
-if visit_techninja_site:
-    js = "window.open('https://share.streamlit.io/juniorcoders123/techninjaallwebapps/main/homepage.py?activity=0')"  # New tab or window
-    html = '<img src onerror="{}">'.format(js)
-    div = Div(text=html)
-    st.bokeh_chart(div)
-github_site = st.button("Visit GitHub repository")
-if github_site:
-    js = "window.open('https://github.com/juniorcoders123/polybit-apps-streamlit')"  # New tab or window
-    html = '<img src onerror="{}">'.format(js)
-    div = Div(text=html)
-    st.bokeh_chart(div)
+visit_techninja_site = "[Visit TechNinja's Site](https://share.streamlit.io/juniorcoders123/techninjaallwebapps/main/homepage.py?activity=0)"
+github_repo = '[Visit the GitHub repository](https://github.com/juniorcoders123/polybit-apps-streamlit)'
+st.sidebar.markdown(visit_techninja_site, unsafe_allow_html=True)
+st.sidebar.markdown(github_repo, unsafe_allow_html=True)
