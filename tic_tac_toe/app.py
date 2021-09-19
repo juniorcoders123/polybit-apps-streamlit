@@ -6,26 +6,26 @@ def check_win(board):
     for i in range(3):
         for j in range(3):
             row_check += board[i][j]
-        if (row_check[0] == row_check[1]) and (row_check[1] == row_check[2]):
+        if (row_check[0] == row_check[1]) and (row_check[1] == row_check[2]) and (row_check[1] != '[]'):
             return row_check[1]
     
     column_check = ''
     for j in range(3):
         for i in range(3):
             column_check += board[i][j]
-        if (column_check[0] == column_check[1]) and (column_check[1] == column_check[2]):
+        if (column_check[0] == column_check[1]) and (column_check[1] == column_check[2]) and (row_check[1] != '[]'):
             return column_check[1]
     
     diagonal_check_1 = ''
     for i in range(3):
         diagonal_check_1 += board[i][i]
-    if (diagonal_check_1[0] == diagonal_check_1[1]) and (diagonal_check_1[1] == diagonal_check_1[2]):
+    if (diagonal_check_1[0] == diagonal_check_1[1]) and (diagonal_check_1[1] == diagonal_check_1[2]) and (row_check[1] != '[]'):
         return diagonal_check_1[1]
     
     diagonal_check_2 = ''
     for i in range(3):
         diagonal_check_2 += board[i][2-i]
-    if (diagonal_check_2[0] == diagonal_check_2[1]) and (diagonal_check_2[1] == diagonal_check_2[2]):
+    if (diagonal_check_2[0] == diagonal_check_2[1]) and (diagonal_check_2[1] == diagonal_check_2[2]) and (row_check[1] != '[]'):
         return diagonal_check_2[1]
     
     return '[]'
