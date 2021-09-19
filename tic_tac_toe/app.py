@@ -37,7 +37,7 @@ def app():
         st.session_state.tic_tac_toe_winner = None
 
     st.markdown("""
-        # Tic Tac Toe Game
+        # Tic Tac Toe Game (currently broken)
         Made by Swastik 'Polybit' Biswas
         ### Local Multiplayer
         ##
