@@ -8,5 +8,3 @@ keras==2.6.0
 matplotlib==3.4.3
 h5py==3.1.0
 streamlit==0.88.0
-bokeh==2.4.0
---force typing-extensions==3.10.0
