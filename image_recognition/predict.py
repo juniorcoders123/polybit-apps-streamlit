@@ -22,7 +22,7 @@ def sort(predictions):
         for j in range(10):
             if x[0][list_index[i]] > x[0][list_index[j]]:
                 list_index[i],list_index[j] = list_index[j],list_index[i]
-    classification = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+    classification = ['airplane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
     arr = []
     for i in range(5):
         arr.append(str(classification[list_index[i]] + ' :' + classification[list_index[i]] + ':' + ' --> ' + str(round(predictions[0][list_index[i]] * 100, 2)) + '%'))
