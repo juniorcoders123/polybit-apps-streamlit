@@ -45,9 +45,9 @@ def app():
         output_area.code('ㅤ\nㅤ\nㅤ\nㅤ\nㅤ')
         info_placeholder = st.empty()
         if run_button:
-            with open("python_ide/run_folder/script.py", "w") as f:
+            with open("/tmp/script.py", "w") as f:
                 f.write(content + '\nquit()')
-            result = subprocess.run(['python','python_ide/run_folder/script.py'], shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            result = subprocess.run(['python','/tmp/script.py'], shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             output_area.code(result.stdout.decode('utf-8'))
             print(result.stdout.decode('utf-8'))
             info_placeholder.info('Program executed and terminated.')
