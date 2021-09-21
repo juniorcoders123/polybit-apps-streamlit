@@ -8,11 +8,13 @@ st.session_state.can_quote = True
 from image_recognition import app as image_recog_app
 from get_inspired import app as get_insp_app
 from tic_tac_toe import app as tic_tac_toe_app
+from python_ide import app as py_ide_app
 
 PAGES = {
     "Image Recognition (IRM)": image_recog_app,
     "Get Inspired": get_insp_app,
-    "Tic Tac Toe Game (broken)": tic_tac_toe_app
+    "Tic Tac Toe Game (broken)": tic_tac_toe_app,
+    "Python IDE": py_ide_app
 }
 
 query_params = st.experimental_get_query_params()
