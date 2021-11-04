@@ -8,11 +8,13 @@ st.session_state.can_quote = True
 from image_recognition import app as image_recog_app
 from get_inspired import app as get_insp_app
 from tic_tac_toe import app as tic_tac_toe_app
+from morse_decoder_encoder import app as morse_app
 
 PAGES = {
     "Image Recognition (IRM)": image_recog_app,
     "Get Inspired": get_insp_app,
     "Tic Tac Toe Game (broken)": tic_tac_toe_app,
+    "Morse Code Decoder + Encoder": morse_app
 }
 
 query_params = st.experimental_get_query_params()
