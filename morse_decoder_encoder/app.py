@@ -68,7 +68,7 @@ def app():
         st.write('English Decoding')
         st.markdown('## ')
         output = st.empty()
-        if st.button('Convert to English'):
+        if st.button('Convert to English Text'):
             try:
                 output.code(morse_decode(morse))
             except:
