@@ -42,27 +42,28 @@ def morse_decode(text):
     }
     return ''.join(morse_code[char] for char in text.split(' '))
 
-st.markdown('''
+def app():
+    st.markdown('''
     # Morse Decoder + Encoder
     ## 
     ## ''')
-operation = st.selectbox('Select type of operation', ('English to Morse','Morse to English'))
-st.markdown('''
+    operation = st.selectbox('Select type of operation', ('English to Morse','Morse to English'))
+    st.markdown('''
     ## ''')
-if operation == 'English to Morse':
-    st.write('Enter your English text here')
-    english = st.text_area('')
-    st.markdown('## ')
-    st.write('Morse Code Encoding')
-    st.markdown('## ')
-    st.code(morse_encode(english))
-elif operation == 'Morse to English':
-    st.write('Enter your Morse Code here')
-    morse = st.text_area('')
-    st.markdown('## ')
-    st.write('English Decoding')
-    st.markdown('## ')
-    try:
-        st.code(morse_decode(morse))
-    except:
-        st.error('Please enter valid Morse Code')
+    if operation == 'English to Morse':
+        st.write('Enter your English text here')
+        english = st.text_area('')
+        st.markdown('## ')
+        st.write('Morse Code Encoding')
+        st.markdown('## ')
+        st.code(morse_encode(english))
+    elif operation == 'Morse to English':
+        st.write('Enter your Morse Code here')
+        morse = st.text_area('')
+        st.markdown('## ')
+        st.write('English Decoding')
+        st.markdown('## ')
+        try:
+            st.code(morse_decode(morse))
+        except:
+            st.error('Please enter valid Morse Code')
