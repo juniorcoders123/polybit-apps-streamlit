@@ -45,7 +45,7 @@ def morse_decode(text):
 def app():
     st.markdown('''
     # Morse Decoder + Encoder
-    ## 
+    ## Special Thanks to TechNinja for the idea!
     ## ''')
     operation = st.selectbox('Select type of operation', ('English to Morse','Morse to English'))
     st.markdown('''
