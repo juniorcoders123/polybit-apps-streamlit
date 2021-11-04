@@ -57,14 +57,23 @@ def app():
         st.markdown('## ')
         st.write('Morse Code Encoding')
         st.markdown('## ')
-        st.code(morse_encode(english))
+        output = st.empty()
+        output.code(morse_encode(english))
+        if st.button('Convert to Morse Code'):
+            output.code(morse_encode(english))
     elif operation == 'Morse to English':
         st.write('Enter your Morse Code here')
         morse = st.text_area('')
         st.markdown('## ')
         st.write('English Decoding')
         st.markdown('## ')
+        output = st.empty()
+        if st.button('Convert to English'):
+            try:
+                output.code(morse_decode(morse))
+            except:
+                output.code('Please enter valid Morse Code')
         try:
-            st.code(morse_decode(morse))
+            output.code(morse_decode(morse))
         except:
-            st.error('Please enter valid Morse Code')
+            output.error('Please enter valid Morse Code')
