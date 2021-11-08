@@ -78,11 +78,6 @@ def app():
         audio = st.empty()
         try:
             output.code(morse_encode(english))
-            morse_audio(morse_encode(english))
-            audio_file = open('morse_decoder_encoder/audio/output.wav', 'rb')
-            audio_bytes = audio_file.read()
-            st.markdown('###### Morse Code Encoding Audio')
-            audio.audio(audio_bytes, format='audio/mp3', start_time=0)
         except:
             output.error('Please use only alphabet characters (A-Z), numbers (0-9), spaces and special characters (,.?/())...\nAny other unicode characters are either not allowed till now or their morse code translations have not been added yet... ')
         if st.button('Convert to Morse Code (+ get audio)'):
