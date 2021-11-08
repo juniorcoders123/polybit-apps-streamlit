@@ -54,7 +54,7 @@ def app():
     operation = st.selectbox('Select type of operation', ('English to Morse (Encoder)','Morse to English (Decoder)'))
     st.markdown('''
     ## ''')
-    if operation == 'English to Morse':
+    if operation == 'English to Morse (Encoder)':
         english = st.text_area('Enter your English text here')
         st.markdown('## ')
         st.markdown('###### Morse Code Encoding')
@@ -68,7 +68,7 @@ def app():
                 output.code(morse_encode(english))
             except:
                 output.error('Please use only alphabet characters (A-Z), numbers (0-9), spaces and special characters (,.?/())...\nAny other unicode characters are either not allowed till now or their morse code translations have not been added yet... ')
-    elif operation == 'Morse to English':
+    elif operation == 'Morse to English (Decoder)':
         morse = st.text_area('Enter your Morse Code here')
         st.markdown('## ')
         st.markdown('###### English Decoding')
