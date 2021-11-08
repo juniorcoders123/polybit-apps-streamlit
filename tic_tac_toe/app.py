@@ -38,7 +38,8 @@ def app():
 
     st.markdown("""
         # Tic Tac Toe Game (currently broken)
-        Made by Swastik 'Polybit' Biswas
+        Made by **Swastik 'Polybit' Biswas**
+        ### 
         ### Local Multiplayer
         ##
     """)
