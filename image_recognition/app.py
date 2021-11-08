@@ -6,7 +6,7 @@ from streamlit.elements.image import image_to_url
 def app():
     st.markdown("""
         # Image Recognition Model
-        Made by Swastik 'Polybit' Biswas
+        Made by **Swastik 'Polybit' Biswas**
         ###
         ### Upload an image and the model will try to predict the item in the image*
 
