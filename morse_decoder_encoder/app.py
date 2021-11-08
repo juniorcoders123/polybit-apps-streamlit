@@ -51,7 +51,7 @@ def app():
     ### 
     ### Enter either English or Morse Code to convert to the other.
     ### ''')
-    operation = st.selectbox('Select type of operation', ('English to Morse','Morse to English'))
+    operation = st.selectbox('Select type of operation', ('English to Morse (Encoder)','Morse to English (Decoder)'))
     st.markdown('''
     ## ''')
     if operation == 'English to Morse':
