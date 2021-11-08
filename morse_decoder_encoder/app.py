@@ -79,7 +79,7 @@ def app():
             output.code(morse_encode(english))
         except:
             output.error('Please use only alphabet characters (A-Z), numbers (0-9), spaces and special characters (,.?/())...\nAny other unicode characters are either not allowed till now or their morse code translations have not been added yet... ')
-        if st.button('Convert to Morse Code (+ get audio)'):
+        if st.button('Convert to Morse Code'):
             try:
                 output.code(morse_encode(english))
         #        morse_audio(morse_encode(english))
