@@ -46,7 +46,7 @@ def app():
     st.markdown('''
     # Morse Decoder + Encoder
     Made by **Swastik 'Polybit' Biswas**
-    
+
     Special Thanks to **TechNinja** for the idea!
     ### 
     ### Enter either English or Morse Code to convert to the other.
@@ -59,9 +59,15 @@ def app():
         st.markdown('## ')
         st.markdown('###### Morse Code Encoding')
         output = st.empty()
-        output.code(morse_encode(english))
-        if st.button('Convert to Morse Code'):
+        try:
             output.code(morse_encode(english))
+        except:
+            output.error('Please use only alphabet characters (A-Z), numbers (0-9) and ",", ".", "?", "/", "(", ")", " "...\nAny other unicode characters are either not allowed till now or their morse code translations have not been added yet... ')
+        if st.button('Convert to Morse Code'):
+            try:
+                output.code(morse_encode(english))
+            except:
+                output.error('Please use only alphabet characters (A-Z), numbers (0-9) and ",", ".", "?", "/", "(", ")", " "...\nAny other unicode characters are either not allowed till now or their morse code translations have not been added yet... ')
     elif operation == 'Morse to English':
         morse = st.text_area('Enter your Morse Code here')
         st.markdown('## ')
