@@ -14,8 +14,9 @@ def app():
         st.session_state.can_quote = False
     st.markdown(f"""
         # Get Inspired
-        #### Brighten your day with quotes from the greatest minds...
-        Made by Swastik 'Polybit' Biswas
+        ### Made by **Swastik 'Polybit' Biswas**
+        ###
+        ### Brighten your day with quotes from the greatest minds...
         ## 
         ## *" {st.session_state.quote[0]} "*
         *- {st.session_state.quote[1]}*
