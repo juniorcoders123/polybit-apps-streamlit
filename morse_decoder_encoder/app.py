@@ -56,7 +56,6 @@ def app():
         english = st.text_area('')
         st.markdown('## ')
         st.write('Morse Code Encoding')
-        st.markdown('## ')
         output = st.empty()
         output.code(morse_encode(english))
         if st.button('Convert to Morse Code'):
@@ -66,9 +65,8 @@ def app():
         morse = st.text_area('')
         st.markdown('## ')
         st.write('English Decoding')
-        st.markdown('## ')
         output = st.empty()
-        if st.button('Convert to English Text'):
+        if st.button('Convert to English'):
             try:
                 output.code(morse_decode(morse))
             except:
