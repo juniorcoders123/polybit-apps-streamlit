@@ -1,20 +1,20 @@
 import streamlit as st
 #from pydub import AudioSegment
 
-sound1 = AudioSegment.from_file('morse_decoder_encoder/audio/dits.wav')
-sound2 = AudioSegment.from_file('morse_decoder_encoder/audio/dah.wav')
-sound3 = AudioSegment.from_file('morse_decoder_encoder/audio/silence.wav')
+#sound1 = AudioSegment.from_file('morse_decoder_encoder/audio/dits.wav')
+#sound2 = AudioSegment.from_file('morse_decoder_encoder/audio/dah.wav')
+#sound3 = AudioSegment.from_file('morse_decoder_encoder/audio/silence.wav')
 
-def morse_audio(morse):
-    message = sound3
-    for char in morse:
-        if char == '.':
-            message += sound1
-        elif char == '-':
-            message += sound2
-        else:
-            message += sound3
-    message.export('morse_decoder_encoder/audio/output.wav', format='wav')
+#def morse_audio(morse):
+#    message = sound3
+#    for char in morse:
+#        if char == '.':
+#            message += sound1
+#        elif char == '-':
+#            message += sound2
+#        else:
+#            message += sound3
+#    message.export('morse_decoder_encoder/audio/output.wav', format='wav')
 
 # write a function that converts english to morse code
 def morse_encode(text):
