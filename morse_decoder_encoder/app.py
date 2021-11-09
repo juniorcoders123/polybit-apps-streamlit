@@ -1,5 +1,5 @@
 import streamlit as st
-from pydub import AudioSegment
+#from pydub import AudioSegment
 
 sound1 = AudioSegment.from_file('morse_decoder_encoder/audio/dits.wav')
 sound2 = AudioSegment.from_file('morse_decoder_encoder/audio/dah.wav')
