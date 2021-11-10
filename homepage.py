@@ -10,14 +10,16 @@ from image_recognition import app as image_recog_app
 from get_inspired import app as get_insp_app
 from tic_tac_toe import app as tic_tac_toe_app
 from morse_decoder_encoder import app as morse_app
+from image_effects import app as image_fx_app
 
 #all the cookies for apps
 cookie_manager = stx.CookieManager()
 
 # latest --> oldest
-cookies_ref = ('morse_app_like', 'tic_tac_toe_app_like', 'get_insp_app_like', 'image_recog_app_like')
+cookies_ref = ('image_fx_app_like', 'morse_app_like', 'tic_tac_toe_app_like', 'get_insp_app_like', 'image_recog_app_like')
 PAGES = {
-    ("⭐ " if cookie_manager.get('morse_app_like') else "") + "Morse Code Decoder + Encoder 🆕": morse_app,
+    ("⭐ " if cookie_manager.get('image_fx_app_like') else "") + "Image Effects 🆕": image_fx_app,
+    ("⭐ " if cookie_manager.get('morse_app_like') else "") + "Morse Code Decoder + Encoder": morse_app,
     ("⭐ " if cookie_manager.get('tic_tac_toe_app_like') else "") + "Tic Tac Toe Game [broken 🛠]": tic_tac_toe_app,
     ("⭐ " if cookie_manager.get('get_insp_app_like') else "") + "Get Inspired": get_insp_app,
     ("⭐ " if cookie_manager.get('image_recog_app_like') else "") + "Image Recognition (IRM)": image_recog_app
