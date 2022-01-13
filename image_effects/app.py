@@ -11,7 +11,7 @@ def app():
     Made with ♥ by **Swastik 'Polybit' Biswas**
     ### 
     ### ''')
-    uploaded_file = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
+    uploaded_file = st.file_uploader("Upload an image...", type=["jpg", "png"])
     if uploaded_file is not None:
         original_image = Image.open(uploaded_file)
         final_image = original_image
