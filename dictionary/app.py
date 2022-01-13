@@ -24,7 +24,7 @@ def app():
                 st.markdown(f"""
                 #### 
                 #### ({i['partOfSpeech']}) {i['definitions'][0]['definition']}
-                Example: {i['definitions'][0]['example']}
+                Example: {i['definitions'][0]['example'] if 'example' in i['definitions'][0] else 'No example available for this current word'}
                 """)
         elif response.status_code == 404:
             st.error('Word not found! Make sure you have entered a valid or a correctly spelled word.')
