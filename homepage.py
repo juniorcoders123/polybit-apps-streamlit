@@ -1,9 +1,7 @@
 import streamlit as st
-import extra_streamlit_components as stx
 
 #Initial setting up (to avoid errors)
 st.set_page_config(page_title='Streamlit Apps | Swastik "Polybit" Biswas - Junior Coders', page_icon='🎯', layout = 'centered', initial_sidebar_state = 'expanded')
-st.session_state.can_quote = True
 
 #all my apps
 from image_recognition import app as image_recog_app
@@ -12,17 +10,12 @@ from tic_tac_toe import app as tic_tac_toe_app
 from morse_decoder_encoder import app as morse_app
 from image_effects import app as image_fx_app
 
-#all the cookies for apps
-cookie_manager = stx.CookieManager()
-
 # latest --> oldest
-cookies_ref = ('image_fx_app_like', 'morse_app_like', 'tic_tac_toe_app_like', 'get_insp_app_like', 'image_recog_app_like')
 PAGES = {
-    ("⭐ " if cookie_manager.get('image_fx_app_like') else "") + "Image Effects 🆕": image_fx_app,
-    ("⭐ " if cookie_manager.get('morse_app_like') else "") + "Morse Code Decoder + Encoder": morse_app,
-    ("⭐ " if cookie_manager.get('tic_tac_toe_app_like') else "") + "Tic Tac Toe Game [broken 🛠]": tic_tac_toe_app,
-    ("⭐ " if cookie_manager.get('get_insp_app_like') else "") + "Get Inspired": get_insp_app,
-    ("⭐ " if cookie_manager.get('image_recog_app_like') else "") + "Image Recognition (IRM)": image_recog_app
+    "Image Effects 🆕": image_fx_app,
+    "Morse Code Decoder + Encoder": morse_app,
+    "Tic Tac Toe Game [broken 🛠]": tic_tac_toe_app,
+    "Image Recognition (IRM)": image_recog_app
 }
 
 query_params = st.experimental_get_query_params()
@@ -34,18 +27,6 @@ if selection:
     st.experimental_set_query_params(activity=list(PAGES).index(selection))
 page = PAGES[selection]
 page.app()
-
-like_button_text = ''
-if cookie_manager.get(cookies_ref[list(PAGES).index(selection)]):
-    like_button_text = 'Dislike this current project 💔'
-else:
-    like_button_text = 'Like this current project! ⭐'
-like_button = st.sidebar.button(like_button_text)
-if like_button:
-    if cookie_manager.get(cookies_ref[list(PAGES).index(selection)]):
-        cookie_manager.delete(cookies_ref[list(PAGES).index(selection)])
-    else:
-        cookie_manager.set(cookies_ref[list(PAGES).index(selection)], True)
 
 visit_techninja_site = "[Visit TechNinja's Site](https://share.streamlit.io/juniorcoders123/techninjaallwebapps/main/homepage.py)"
 github_repo = '[Visit the GitHub repository](https://github.com/juniorcoders123/polybit-apps-streamlit)'
