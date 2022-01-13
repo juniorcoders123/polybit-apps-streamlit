@@ -8,7 +8,7 @@ import base64
 def app():
     st.markdown('''
     # Image Effects
-    Made by **Swastik 'Polybit' Biswas**
+    Made with ♥ by **Swastik 'Polybit' Biswas**
     ### 
     ### ''')
     uploaded_file = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
