@@ -5,7 +5,6 @@ st.set_page_config(page_title='Streamlit Apps | Swastik "Polybit" Biswas - Junio
 
 #all my apps
 from image_recognition import app as image_recog_app
-from get_inspired import app as get_insp_app
 from tic_tac_toe import app as tic_tac_toe_app
 from morse_decoder_encoder import app as morse_app
 from image_effects import app as image_fx_app
