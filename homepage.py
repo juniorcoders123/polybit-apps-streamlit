@@ -8,10 +8,12 @@ from image_recognition import app as image_recog_app
 from tic_tac_toe import app as tic_tac_toe_app
 from morse_decoder_encoder import app as morse_app
 from image_effects import app as image_fx_app
+from dictionary import app as dictionary_app
 
 # latest --> oldest
 PAGES = {
-    "Image Effects 🆕": image_fx_app,
+    "English Dictionary 🆕": dictionary_app,
+    "Image Effects": image_fx_app,
     "Morse Code Decoder + Encoder": morse_app,
     "Tic Tac Toe Game [broken 🛠]": tic_tac_toe_app,
     "Image Recognition (IRM)": image_recog_app
