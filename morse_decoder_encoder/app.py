@@ -61,7 +61,7 @@ def morse_decode(text):
 def app():
     st.markdown('''
     # Morse Decoder + Encoder
-    Made by **Swastik 'Polybit' Biswas**
+    Made with ♥ by **Swastik 'Polybit' Biswas**
 
     Special Thanks to **TechNinja** for the idea!
     ### 
