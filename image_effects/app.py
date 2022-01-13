@@ -15,7 +15,7 @@ def app():
     if uploaded_file is not None:
         original_image = Image.open(uploaded_file)
         final_image = original_image
-        original_image_holder, final_image_holder = st.columns(1,1)
+        original_image_holder, final_image_holder = st.columns(2)
         original_image_holder.image(original_image, 'Original Image', use_column_width=True)
         fx = st.selectbox('Select an image effect...', ['None', 'Invert', 'Grayscale', 'Blur', 'Sharpen', 'Contrast', 'Brightness', 'Oil Painting Effect', 'Sketch Effect'])
         if fx == 'None':
