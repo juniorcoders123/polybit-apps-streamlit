@@ -14,7 +14,7 @@ def app():
         st.session_state.can_quote = False
     st.markdown(f"""
         # Get Inspired
-        ### Made by **Swastik 'Polybit' Biswas**
+        ### Made with ♥ by **Swastik 'Polybit' Biswas**
         ###
         ### Brighten your day with quotes from the greatest minds...
         ## 
