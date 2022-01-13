@@ -52,8 +52,8 @@ def app():
             final_image = cv2.divide(gray_image, inverted_bi, scale=256.0)
         else:
             st.error('Please select a valid image effect from the dropdown...')
-        final_image_holder.image(final_image, 'Final Image', use_column_width=True)
         if fx == 'Oil Painting Effect' or fx == 'Sketch Effect':
             final_image = Image.fromarray(final_image)
         final_image.save('image_effects/image.jpg')
+        final_image_holder.image(final_image, 'Final Image', use_column_width=True)
         st.download_button('Download Final Image', 'image_effects/image.jpg')
