@@ -16,7 +16,8 @@ def app():
         original_image = Image.open(uploaded_file)
         final_image = original_image
         original_image_holder, final_image_holder = st.columns(2)
-        original_image_holder.image(original_image, 'Original Image', use_column_width=True)
+        with original_image_holder:
+            st.image(original_image, 'Original Image', use_column_width=True)
         fx = st.selectbox('Select an image effect...', ['None', 'Invert', 'Grayscale', 'Blur', 'Sharpen', 'Contrast', 'Brightness', 'Oil Painting Effect', 'Sketch Effect'])
         if fx == 'None':
             pass
@@ -55,5 +56,6 @@ def app():
         if fx == 'Oil Painting Effect' or fx == 'Sketch Effect':
             final_image = Image.fromarray(final_image)
         final_image.save('image_effects/image.jpg')
-        final_image_holder.image(final_image, 'Final Image', use_column_width=True)
+        with final_image_holder:
+            st.image(final_image, 'Final Image', use_column_width=True)
         st.download_button('Download Final Image', 'image_effects/image.jpg')
